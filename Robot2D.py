@@ -27,9 +27,9 @@ class Robot2D :
         self.path.append((self.x,self.y))
 
     def pose_history(self):
-        print(" ____________")
-        print("|Robot Status|")
-        print(" ____________")
+        print("##############")
+        print("#Robot Status#")
+        print("##############")
 
         for index,point in enumerate(self.path):
             print(f"\nPoint {index}: ({point[0]:.2f}, {point[1]:.2f})\n")
@@ -61,10 +61,10 @@ class Robot2D :
      
 def main():
     running=True
+    print("\n Welcome to Robot2D")
     my_robot=Robot2D(0.0,0.0,0.0)
     while running:
-        print(" Welcome to Robot2D")
-        question=input("\nRobot2D Menu\n\n"\
+        question=input("\n  Robot2D Menu\n"\
                     "m for declare distance\n"\
                     "r for declare rotation\n"\
                     "s for show current pose\n"\
@@ -125,7 +125,7 @@ def main():
 
         elif question.lower() =="q":
             print("Exit from Menu.")
-            print("Good bye!!!")
+            print("Good bye !")
             running=False   
         else:
             print("Invalid input.Try again")
